@@ -1,0 +1,230 @@
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'PT Serif', serif; */
+/* #d000f1 = magenta */
+/* #f96430 = orange */
+/* #ffe045 = yellow */
+/* ##aacdbe = light blue */
+/* #ea907a = coral */
+
+body{
+  height:100%;
+  background-size: cover;
+  margin: 0;
+}
+header{
+  position: fixed;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  transition: padding 300ms ease;
+}
+
+/*Header Parallax Element*/ 
+.paral {
+font-family: 'Poppins', sans-serif;
+min-height: 600px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 25% 25%;
+//background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+
+
+/* Heading for Parallax Section */ 
+
+.paral h1 {
+color: white;
+text-shadow: black 40px;
+font-size: 60px;
+text-align: center;
+padding-top: 195px;
+line-height: 100px;
+text-shadow: 5.0px 3.0px black;
+
+}
+/* Paragraph for Parallax Section */
+.paral p {
+font-family: 'Poppins', sans-serif;
+font-size: 24px;
+color: #aacdbe;
+text-align: center;
+margin-bottom: 75px; 
+line-height: 60px;
+text-shadow: 3.0px 2.0px black;
+}
+
+.lead-btn {
+
+text-align: center;
+margin-bottom: 75px; 
+line-height: 60px;
+
+}
+/* Images for Parallax Section */ 
+.paralsec {
+background-image: url("https://cdn.vox-cdn.com/thumbor/ti2vY8EdtPfA4FnE_EstpQLMHgI=/0x0:2880x1920/1400x1050/filters:focal(1210x730:1670x1190):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/61977211/Life_Alive_Brookline_Food_01_fl7a2483.6.jpeg");
+position: sticky;
+opacity: 0.90;
+background-color: rgb(5, 5, 12);
+margin-bottom: -150px;
+}
+
+
+.paralsec2 {
+background-image: url("https://www.nycinsiderguide.com/wp-content/uploads/2019/05/restaurant-week-new-york-city.jpg");
+position: sticky;
+opacity: 0.90;
+background-color: rgb(5, 5, 12);
+margin-left: -120px;
+margin-right: -120px;
+margin-top: 0rem;
+}
+
+.navbar{
+ height: 150px;
+}
+
+.navbar img{
+ margin-left: 5 px;
+ padding-top: 2 px;
+}
+
+
+
+nav{
+  width:100vw;
+  background-color: #d000f1;
+  position: sticky;
+}
+
+
+li{
+  list-style-type: none;
+  margin: 0 2vw;
+  margin-left: 5px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+
+  /* dispose elements in a row */
+  display: flex;
+  text-align: right;
+  justify-content: right;
+  align-items: right;
+}
+
+a{
+  text-decoration: none;
+  padding: 2vw;
+  font-family: 'Poppins', sans-serif;
+  display:block; 
+  
+}
+
+a:hover{
+  background-color: #aacdbe;
+}
+
+h1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 75px; 
+  text-align: center;
+  color: #aacdbe;
+  padding: 200px;
+  margin: auto;
+
+}
+
+p{
+  font-family: 'PT Serif', serif;
+  color:#aacdbe; 
+  display: block;
+  text-align: center; 
+  position: relative; top: -200px;
+
+}
+
+h2{
+  font-family: 'PT Serif', serif;
+  color:#aacdbe; 
+  display: block;
+  text-align: center;
+
+}
+
+
+img {
+  border-radius: 50%;
+}
+
+.place {
+  width: 30%;
+  position: relative;
+  top: -450px;
+  left: 250px;
+  padding: 60px;
+}
+
+.place2 {
+  width: 30%;
+  position: relative;
+  top: 100px;
+  left: 400px;
+  padding: 60px;
+}
+
+.placeofwords2 {
+  width: 30%;
+  position: relative;
+  top: 400px;
+  left: 300px;
+
+}
+
+.placeofwords1 {
+  width: 30%;
+  position: relative;
+  top: 600x;
+  left: 900px;
+}
+
+.footer{
+  font-family: 'PT Serif', serif;
+	text-align: start;
+	align-items: center;
+  background-color: #ea907a;
+  margin-top: -130px;
+}
+.footer p{
+	margin:0;
+}
+.footer a i{
+	padding: 0 10px;
+	font-size: 30px;
+}
+
+.col-md-4{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 0rem;
+}
+
+
+
+
+
+.btn-success {
+	color: #fff;
+	background-color: #28a745 !important;
+	border-color: #28a745 !important;
+}
+.fa-square{
+	margin-right:10px;
+}
