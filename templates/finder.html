@@ -44,14 +44,27 @@
 	<li>{{ rest.name }} - {{ rest.allergen }} </li>
 	{% endfor %}
     <br>
-    {% for rest in restaurants %}
+    <!-- {% for rest in restaurants %}
         {% for all in rest.allergen %}
         {% if all == 'peanut-free'%}
-        <li>{{ rest.name }} - {{ rest.allergen }} </li>
+        <li>{{ rest.name }} - {{ rest.allergen }} </li> -->
 	    <!-- <li>{{ rest.name }} - {{ rest.allergen }} </li> -->
-	    {% endif %}
+	    <!-- {% endif %}
         {% endfor %}
-    {% endfor %}
+    {% endfor %} -->
+    {% for rest in restaurants %}
+        {% for all in rest.allergen %}
+            {% if all == "peanut-free" %}
+                    <p> {{ rest.name }} {{rest.street_address}} {{rest.hours}} {{rest.contact}} </p>  
+            {% elif all == "shellfish-free" %}
+                    <p> {{ rest.name }} {{rest.street_address}} {{rest.hours}} {{rest.contact}} </p>
+            {% elif all == "reduced lactose" %}
+                    <p> {{ rest.name }} {{rest.street_address}} {{rest.hours}} {{rest.contact}} </p>  
+             {% elif all == "soy-free" %}
+                    <p> {{ rest.name }} {{rest.street_address}} {{rest.hours}} {{rest.contact}} </p>                       
+            {% endif %}       
+        {% endfor %}        
+	{% endfor %}
 </ol>
 <!-- Dropdowns for user to select allergen -->
 <form method="post" action="/getinfo">
@@ -65,24 +78,29 @@
     <label class="custom-control-label" for="defaultChecked">Shellfish</label>
   </div>
   <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="default" name="lactose" value="lactose-free">
-    <label class="custom-control-label" for="default">Lactose</label>
+    <input type="checkbox" class="custom-control-input" id="default" name="shellfish" value=
+   "shellfish-free">
+    <label class="custom-control-label" for="default">Shellfish</label>
+  </div>
+  <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="default1" name="lactose" value="r-lactose">
+    <label class="custom-control-label" for="default1">Lactose</label>
   </div>
   <input type="submit" value="Submit">
 </form>  
 <form method="post" action="/getinfo">
   <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked" name="vegan" value="vegan">
-    <label class="custom-control-label" for="defaultUnchecked">Vegan</label>
+    <input type="checkbox" class="custom-control-input" id="default2" name="vegan" value="vegan">
+    <label class="custom-control-label" for="default2">Vegan</label>
   </div>
   <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultChecked" name="gluten-free" value=
+    <input type="checkbox" class="custom-control-input" id="default3" name="gluten-free" value=
    "gluten-free">
-    <label class="custom-control-label" for="defaultChecked">Gluten Free</label>
+    <label class="custom-control-label" for="default3">Gluten Free</label>
   </div>
   <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="default" name="kosher" value="kosher">
-    <label class="custom-control-label" for="default">Lactose</label>
+    <input type="checkbox" class="custom-control-input" id="default4" name="kosher" value="kosher">
+    <label class="custom-control-label" for="default4">Kosher</label>
   </div>
   <input type="submit" value="Submit">
 </form>  
