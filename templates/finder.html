@@ -65,6 +65,18 @@
             {% endif %}       
         {% endfor %}        
 	{% endfor %}
+    <!-- {% for rest in restaurants %}
+        {% for all in rest.dietary_restrict %}
+            {% if all == "vegan" %}
+                    <p> {{ rest.name }} {{rest.street_address}} {{rest.hours}} {{rest.contact}} </p>  
+            {% elif all == "gluten-free" %}
+                    <p> {{ rest.name }} {{rest.street_address}} {{rest.hours}} {{rest.contact}} </p>
+            {% elif all == "kosher %}
+                    <p> {{ rest.name }} {{rest.street_address}} {{rest.hours}} {{rest.contact}} </p>  
+            {% endif %}       
+        {% endfor %}        
+	{% endfor %} -->
+    
 </ol>
 <!-- Dropdowns for user to select allergen -->
 <form method="post" action="/getinfo">
@@ -78,9 +90,9 @@
     <label class="custom-control-label" for="defaultChecked">Shellfish</label>
   </div>
   <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="default" name="shellfish" value=
+    <input type="checkbox" class="custom-control-input" id="default" name="soy" value=
    "shellfish-free">
-    <label class="custom-control-label" for="default">Shellfish</label>
+    <label class="custom-control-label" for="default">Soy-Free</label>
   </div>
   <div class="custom-control custom-checkbox">
     <input type="checkbox" class="custom-control-input" id="default1" name="lactose" value="r-lactose">
